@@ -1,1 +1,23 @@
-<h1>PATA PATA NEWS ASAP !!</h1>
+{% extends 'base.html' %} 
+{% import 'macros.html' as macro%}
+
+
+<!-- Content Block -->
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <div class="panel">
+            <!--TOP NEWS-->
+            <h3>Top News </h3>
+            <ul>
+                {{ macro.displayNewsList(biashara) }}
+            </ul>
+            <!--SPORTS-->
+            <h3>SPORTS</h3>
+            <ul>
+                {{ macro.displayNewsList(michezo) }}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
