@@ -15,7 +15,6 @@ def get_news(category):
     """
 
     get_news_url = base_url.format(category, api_key)
-    print(get_news_url)
 
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
@@ -35,40 +34,19 @@ def process_results(news_list):
     Args:
         news_list: A list of dictionaries that contain news details
     Returns:
-        headlines_results: A list of headlines objects
+        headlines_results: A lsist of headlines objects
     """
-    new_results = []
-    for new in news_list:
-        source = new.get('source')
-        author = new.get('author')
-        title = new.get('title')
+    news_results = []
+    for news in news_list:
+        source = news.get('source')
+        author = news.get('author')
+        title = news.get('title')
         description = new.get('description')
-        url = new.get('url')
-        image_url = new.get('urlToImage')
-        publish_time = new.get('publishedAt')
+        url = news.get('url')
+        image_url = news.get('urlToImage')
+        publish_time = news.get('publishedAt')
 
-        new_object = News(source, author, title, description, url, image_url, publish_time)
-        new_results.append(new_object)
+        news_object = News(source, author, title, description, url, image_url, publish_time)
+        news_results.append(news_object)
 
-    return new_results
-
-def get_new(id):
-    get_new_details_url = base_url.format(id,api_key)
-
-    with urllib.request.urlopen(get_new_details_url) as url:
-        new_details_data = url.read()
-        new_details_response = json.loads(new_details_data)
-
-        new_object = None
-
-        if new_details_response:
-            id = new_details_response.get('id')
-            title = new_details_response.get('original_title')
-            overview = new_details_response.get('overview')
-            poster = new_details_response.get('poster_path')
-            vote_average = new_details_response.get('vote_average')
-            vote_count = new_details_response.get('vote_count')
-
-            new_object = News(id,title,overview,poster,vote_average,vote_count)
-
-    return new_object
+    return news_results
