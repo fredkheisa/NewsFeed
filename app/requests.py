@@ -15,6 +15,7 @@ def get_news(category):
     """
 
     get_news_url = base_url.format(category, api_key)
+    print(get_news_url)
 
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
@@ -23,12 +24,12 @@ def get_news(category):
         new_results = None
 
         if get_news_response['articles']:
-            news_results_list = get_news_response['articles']
-            news_results = process_results(news_results_list)
+            new_results_list = get_news_response['articles']
+            new_results = process_results(new_results_list)
 
-    return news_results
+    return new_results
 
-def process_results(news_list):
+def process_results(new_list):
     """
     Function that processes api results and transforms them to a list of Objects
     Args:
@@ -36,17 +37,18 @@ def process_results(news_list):
     Returns:
         headlines_results: A lsist of headlines objects
     """
-    news_results = []
-    for news in news_list:
-        source = news.get('source')
-        author = news.get('author')
-        title = news.get('title')
+    new_results = []
+
+    for new in news_list:
+        source = new.get('source')
+        author = new.get('author')
+        title = new.get('title')
         description = new.get('description')
-        url = news.get('url')
-        image_url = news.get('urlToImage')
-        publish_time = news.get('publishedAt')
+        url = new.get('url')
+        image_url = new.get('urlToImage')
+        publish_time = new.get('publishedAt')
 
-        news_object = News(source, author, title, description, url, image_url, publish_time)
-        news_results.append(news_object)
+        new_object = News(source, author, title, description, url, image_url, publish_time)
+        new_results.append(new_object)
 
-    return news_results
+    return new_results
