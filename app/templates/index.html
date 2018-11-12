@@ -9,12 +9,16 @@
     <ul class="container" >
         {% for biashara in business %}
         <div class="row">
-        <li>{{ biashara.title}}</li>
-        <li>{{ biashara.author}}</li>
-        <img class="img-responsive" src="{{biashara.image_url}}" alt="">
-        <li>{{ biashara.description}}</li>
-        <li>{{ biashara.publish_time}}</li>
-    </div>
+            <div class="card">
+                <img class="card-img-top" style="width: 38rem;" src="{{biashara.image_url}}" alt="">
+            </div>
+            <div >
+                <li>{{ biashara.title}}</li>
+                <li>{{ biashara.author}}</li>
+                <li>{{ biashara.description}}</li>
+                <li>{{ biashara.publish_time}}</li>
+            </div>
+        </div>
 
         {% endfor %}
     </ul>
