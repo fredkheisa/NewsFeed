@@ -6,13 +6,15 @@
     <!-- Popular movie section  -->
 
     <h1><strong>PATA PATA NEWS !!</strong></h1>
-    <ul class="container">
+    <ul class="container" >
         {% for biashara in business %}
+        <div class="row">
         <li>{{ biashara.title}}</li>
         <li>{{ biashara.author}}</li>
         <img class="img-responsive" src="{{biashara.image_url}}" alt="">
         <li>{{ biashara.description}}</li>
         <li>{{ biashara.publish_time}}</li>
+    </div>
 
         {% endfor %}
     </ul>
