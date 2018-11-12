@@ -28,3 +28,6 @@ def articles(id):
 	title = f'NH | {id}'
 
 	return render_template('articles.html',title= title,articles = articles)
+
+
+
