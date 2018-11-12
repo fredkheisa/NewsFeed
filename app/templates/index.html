@@ -1,1 +1,22 @@
-<h1> Hello World </h1>
+{% import 'macros.html' as macro%}
+
+
+<!-- Content Block -->
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <div class="panel">
+            <!--TOP NEWS-->
+            <h3>Top source </h3>
+            <ul>
+                {{ macro.displaySourceList(biashara) }}
+            </ul>
+            <!--SPORTS-->
+            <h3>SPORTS</h3>
+            <ul>
+                {{ macro.displaySourceList(michezo) }}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
