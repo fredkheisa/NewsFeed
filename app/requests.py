@@ -40,15 +40,15 @@ def process_results(source_list):
         headlines_results: A list of headlines objects
     """
     source_results = []
-    for source in sources_list:
-        source = source.get('source')
-        author = source.get('author')
-        title = source.get('title')
-        description = source.get('description')
-        url = source.get('url')
-        image_url = source.get('urlToImage')
-        publish_time = source.get('publishedAt')
-
+    for source_item in source_list:
+        source = source_item.get('source')
+        author = source_item.get('author')
+        title = source_item.get('title')
+        description = source_item.get('description')
+        url = source_item.get('url')
+        image_url = source_item.get('urlToImage')
+        publish_time = source_item.get('publishedAt')
+        print(title)
         source_object = Source(source, author, title, description, url, image_url, publish_time)
         source_results.append(source_object)
 

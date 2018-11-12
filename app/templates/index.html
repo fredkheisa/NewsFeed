@@ -1,22 +1,12 @@
-{% import 'macros.html' as macro%}
-
-
-<!-- Content Block -->
-{% block content %}
-<div class="jumbotron">
-    <div class="container">
-        <div class="panel">
-            <!--TOP NEWS-->
-            <h3>Top source </h3>
-            <ul>
-                {{ macro.displaySourceList(biashara) }}
-            </ul>
-            <!--SPORTS-->
-            <h3>SPORTS</h3>
-            <ul>
-                {{ macro.displaySourceList(michezo) }}
-            </ul>
-        </div>
-    </div>
-</div>
-{% endblock %}
+<body>
+    <!-- Popular movie section  -->
+    <h3> </h3>
+     <ul>
+        {% for biashara in business %}
+            <li>{{ biashara.title}}</li>
+            <li>{{ biashara.author}}</li>
+            <li>{{ biashara.description}}</li>
+            <li>{{ biashara.publish_time}}</li>
+        {% endfor %}
+    </ul>
+</body>

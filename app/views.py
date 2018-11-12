@@ -10,10 +10,9 @@ def index():
     View root page function that returns the index page and its data
     '''
      # Getting popular headlines
-    biashara = get_sources('business')
+    biashara = get_sources('bbc-news')
 
-    print(biashara)
-    print(michezo)
+    print(biashara[0].title)
 
     title = 'PATAPATA NEWS AND STORIES'
     return render_template('index.html', title = title, business = biashara)
