@@ -1,14 +1,20 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro%}
+
 <body>
+
+    {% block content %}
     <!-- Popular movie section  -->
-    <h3> </h3>
-     <ul>
+
+    <h1><strong>PATA PATA NEWS !!</strong></h1>
+    <ul class="container">
         {% for biashara in business %}
-            <li>{{ biashara.title}}</li>
-            <li>{{ biashara.author}}</li>
-            <li>{{ biashara.description}}</li>
-            <li>{{ biashara.publish_time}}</li>
-            <img class="img-responsive" src="{{biashara.image_url}}" alt="">
+        <li>{{ biashara.title}}</li>
+        <li>{{ biashara.author}}</li>
+        <img class="img-responsive" src="{{biashara.image_url}}" alt="">
+        <li>{{ biashara.description}}</li>
+        <li>{{ biashara.publish_time}}</li>
 
         {% endfor %}
     </ul>
+    {% endblock%}
 </body>
