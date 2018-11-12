@@ -1,23 +1,55 @@
-{% extends 'base.html' %} 
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
+<!DOCTYPE html>
+<html>
 
-<!-- Content Block -->
-{% block content %}
-<div class="jumbotron">
-    <div class="container">
-        <div class="panel">
-            <!--TOP NEWS-->
-            <h3>Top News </h3>
-            <ul>
-                {{ macro.displayNewsList(biashara) }}
-            </ul>
-            <!--SPORTS-->
-            <h3>SPORTS</h3>
-            <ul>
-                {{ macro.displayNewsList(michezo) }}
-            </ul>
-        </div>
-    </div>
-</div>
+<head>
+    <meta charset="utf-8">
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> News Highlighter </title>
+    {% endif %}
+</head>
+
+<!-- Styles block -->
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
+
+<body>
+  <div class="container">
+		<!-- Business News Section  -->
+        <h3> Top Business News Sources</h3>
+        <hr>
+
+        {{ macro.displaySourceList(sources)}}
+
+        <!-- Business News Section  -->
+         
+        <h3> Top Technology News Sources</h3>
+        <hr>
+
+        {{ macro.displaySourceList(technology_sources)}}
+
+        <!-- Entertainment News Section  -->
+         
+        <h3> Top Entertainment News Sources</h3>
+        <hr>
+
+        {{ macro.displaySourceList(entertainment_sources)}}
+
+        <!-- Entertainment News Section  -->
+         
+        <h3> Top Sports News Sources</h3>
+        <hr>
+
+        {{ macro.displaySourceList(sports_sources)}}
+	
+</div>
+</body>
+
+</html>
