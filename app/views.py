@@ -20,10 +20,7 @@ def index():
 @app.route('/link/<int:id>')
 def link(id):
 
-    '''
-    View movie page function that returns the movie details page and its data
-    '''
     link = get_links(id)
     title = f'{link.title}'
 
-    return render_template('movie.html',title = title,link = link)
+    return render_template('index.html',title = title,link = link)

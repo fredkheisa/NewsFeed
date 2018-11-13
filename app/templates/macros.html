@@ -1,7 +1,9 @@
-{% macro displaySourceList(source_list) %}
-
-    {% for source in source_list %}
+{% macro displaySourceList(source_list) %} {% for source in source_list %}
+<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
+    <img src="{{ biashara.image_url }}" alt="{{ biashara.title }} poster" class="img-responsive">
+    <li class="text-center">
+            <a href="/links/{{links.id}}">
         <li>{{ source.title}}</li>
-    {% endfor %}
-
-{% endmacro %}
+    </li>
+</div>
+{% endfor %} {% endmacro %}
