@@ -1,7 +1,6 @@
 # NewsFeed
 #### News-Highlights is a Flask based application which displays the latest news in various categories such as business and sports.
 #### The live link to News-highlights is :
-https://n3ws-app.herokuapp.com/hkh
 ## Installation Requirements
 * A browser
 * A virtual environment

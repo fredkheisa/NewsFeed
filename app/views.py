@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .requests import get_sources,get_links
+from .requests import get_sources
 
 # Views
 @app.route('/')
@@ -10,7 +10,7 @@ def index():
     View root page function that returns the index page and its data
     '''
      # Getting popular headlines
-    biashara = get_sources('bbc-news')
+    biashara = get_sources('business')
 
     print(biashara[0].title)
 

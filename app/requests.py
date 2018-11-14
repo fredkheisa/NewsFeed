@@ -54,7 +54,7 @@ def process_results(source_list):
 
     return source_results
 
-def get_links(id):
+def get_links():
     """ 
     function that gets the sources on request 
     """
