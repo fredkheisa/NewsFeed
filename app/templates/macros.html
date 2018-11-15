@@ -1,9 +1,15 @@
-{% macro displaySourceList(source_list) %} {% for source in source_list %}
-<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
-    <img src="{{ biashara.image_url }}" alt="{{ biashara.title }} poster" class="img-responsive">
-    <li class="text-center">
-            <a href="/links/{{links.id}}">
-        <li>{{ source.title}}</li>
-    </li>
+{% macro displaySourceList(source_list) %}
+<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 source-card">
+    {% for source in source_list %}
+    <li><a href="/source/{{source.id}}">{{ source.name}}</a></li>
+    {% endfor %}
 </div>
-{% endfor %} {% endmacro %}
+
+{% endmacro %} {% macro displayArticleList(article_list) %}
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 article-card">
+    {% for article in article_list %}
+    <li>{{ article.name}}</li>
+    {% endfor %}
+</div>
+
+{% endmacro %}
