@@ -14,45 +14,50 @@
 
 <body>
     {% block content %}
-    <div class="container" style="padding-top:60px;">
-        <h1 style="font-size:50px; text-align:center;"><strong>PATA PATA NEWS !!</strong></h1> <hr><hr><hr>
-        <!-- general source section  -->
-        <div class="row">
-            <div class="col-md-3">
-                <!-- Sports news  -->
-                <h3 class="text-danger"> Sports News/Michezo </h3>
-                <ul>
-                   <strong>{{ macro.displaySourceList(sports)}}</strong> 
-                </ul>
+    <div class="container">
+        <div class="jumbotron " style="padding-top:60px;">
+            <h1 style="font-size:50px; text-align:center;"><strong>PATA PATA NEWS !!</strong></h1>
+            <hr>
+            <hr>
+            <hr>
+            <!-- general source section  -->
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Sports news  -->
+                    <h3 class="text-danger"> Sports News/Michezo </h3>
+                    <ul>
+                        <strong>{{ macro.displaySourceList(sports)}}</strong>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <!-- Technology news  -->
+                    <h3 class="text-danger"> Technology News/Ufundi </h3>
+                    <ul>
+                        <strong>{{ macro.displaySourceList(technology)}}</strong>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <!-- Entertainment news  -->
+                    <h3 class="text-danger"> Entertainment News /Burudani </h3>
+                    <ul>
+                        <strong>{{ macro.displaySourceList(entertainment)}}</strong>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <!-- Business news  -->
+                    <h3 class="text-danger"> Business News/Biashara </h3>
+                    <ul>
+                        <strong>{{ macro.displaySourceList(business)}}</strong>
+                    </ul>
+                </div>
+                <div class="col-md-1 ">
+                    <!-- Science news  -->
+                    <h3 class="text-danger "> Science News/Sayansi </h3>
+                    <ul>
+                        <strong>{{ macro.displaySourceList(science)}}</strong>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-3">
-                <!-- Technology news  -->
-                <h3 class="text-danger"> Technology News/Ufundi </h3>
-                <ul>
-                    <strong>{{ macro.displaySourceList(technology)}}</strong>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <!-- Entertainment news  -->
-                <h3 class="text-danger"> Entertainment News /Burudani </h3>
-                <ul>
-                    <strong>{{ macro.displaySourceList(entertainment)}}</strong>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <!-- Business news  -->
-                <h3 class="text-danger"> Business News/Biashara </h3>
-            <ul>
-                  <strong>{{ macro.displaySourceList(business)}}</strong>
-            </ul>
-      </div>
-      <div class="col-md-1 ">
-            <!-- Science news  -->
-            <h3 class="text-danger "> Science News/Sayansi </h3>
-            <ul>
-                  <strong>{{ macro.displaySourceList(science)}}</strong>
-            </ul>
-      </div>
-</div>
-</div>
-{% endblock%}
+        </div>
+    </div>
+    {% endblock%}
