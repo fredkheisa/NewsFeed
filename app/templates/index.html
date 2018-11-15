@@ -15,42 +15,42 @@
 <body>
     {% block content %}
     <div class="container" style="padding-top:60px;">
-        <h1 style="font-size:50px; text-align:center;">ONLINE NEWS</h1>
+        <h1 style="font-size:50px; text-align:center;">PATA PATA NEWS</h1> <hr><hr><hr>
         <!-- general source section  -->
         <div class="row">
             <div class="col-md-3">
                 <!-- Sports news  -->
-                <h3 class="text-danger"> Sports News </h3>
+                <h3 class="text-danger"> Sports News/Michezo </h3>
                 <ul>
-                    {{ macro.displaySourceList(sports)}}
+                   <strong>{{ macro.displaySourceList(sports)}}</strong> 
                 </ul>
             </div>
             <div class="col-md-3">
                 <!-- Technology news  -->
-                <h3 class="text-danger"> Technology News </h3>
+                <h3 class="text-danger"> Technology News/Ufundi </h3>
                 <ul>
-                    {{ macro.displaySourceList(technology)}}
+                    <strong>{{ macro.displaySourceList(technology)}}</strong>
                 </ul>
             </div>
             <div class="col-md-3">
                 <!-- Entertainment news  -->
-                <h3 class="text-danger"> Entertainment News </h3>
+                <h3 class="text-danger"> Entertainment News /Burudani </h3>
                 <ul>
-                    {{ macro.displaySourceList(entertainment)}}
+                    <strong>{{ macro.displaySourceList(entertainment)}}</strong>
                 </ul>
             </div>
             <div class="col-md-2">
                 <!-- Business news  -->
-                <h3 class="text-danger" "> Business News </h3>
+                <h3 class="text-danger"> Business News/Biashara </h3>
             <ul>
-                  {{ macro.displaySourceList(business)}}
+                  <strong>{{ macro.displaySourceList(business)}}</strong>
             </ul>
       </div>
       <div class="col-md-1 ">
             <!-- Science news  -->
-            <h3 class="text-danger "> Science News </h3>
+            <h3 class="text-danger "> Science News/Sayansi </h3>
             <ul>
-                  {{ macro.displaySourceList(science)}}
+                  <strong>{{ macro.displaySourceList(science)}}</strong>
             </ul>
       </div>
 </div>
